@@ -6,6 +6,7 @@
 
 int main(){
 	struct timeval t;
+	int n;
 	if((n = syscall(352,&t)) < 0)
 	 	printf("Calling get_system_time failed with error code %d\n", n);
 
