@@ -1,0 +1,14 @@
+#include <syscall.h>
+#include <stdio.h>
+#include <error.h>
+#include <string.h>
+#include <sys/time.h>
+
+int main(){
+	struct timeval t;
+	int n = syscall(352,&t);
+ 	printf("%d\n", n);
+
+	printf("time is (%d,%d)\n", t.tv_sec, t.tv_usec);
+	return 0;
+}
